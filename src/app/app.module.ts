@@ -8,10 +8,10 @@ import { TopNavBarComponent } from './top-nav-bar/top-nav-bar.component';
 import { AppHomeComponent } from './app-home/app-home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DashboardFirstlineComponent } from './dashboard-firstline/dashboard-firstline.component';
-// import { RPA_PROCESSES } from './mock-processes';
+
 import { GetCountbyLOB } from './count-byLOB.pipe';
 import { ResourcesComponent } from './resources/resources.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { ResourcesComponent } from './resources/resources.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
