@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component';
@@ -13,6 +14,9 @@ import { GetCountbyLOB } from './count-byLOB.pipe';
 import { ResourcesComponent } from './resources/resources.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { MemeberService } from './services/memeber.service';
+import { DashboardSecondlineComponent } from './dashboard-secondline/dashboard-secondline.component'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +25,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     DashboardFirstlineComponent,
     GetCountbyLOB,
-    ResourcesComponent
+    ResourcesComponent,
+    DashboardSecondlineComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [MemeberService],
   bootstrap: [AppComponent],
   exports:[GetCountbyLOB]
 })
