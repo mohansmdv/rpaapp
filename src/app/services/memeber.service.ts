@@ -10,10 +10,11 @@ import { Membermodel } from '../model/membermodel';
 export class MemeberService {
 
   constructor(private http: HttpClient) { }
-  public API = 'https://localhost:44390/api/';
+  public API = 'http://localhost:81/api/';
   public SUGARLEVELS_API = `${this.API}/Student`;
 
     getAll(): Observable<Array<Membermodel>> {
       return this.http.get<Array<Membermodel>>(this.SUGARLEVELS_API);
     }
 }
+
